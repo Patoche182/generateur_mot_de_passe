@@ -13,6 +13,7 @@
             // 3 - Comment choisir un caractère aléatoire
             // 4 - Générer le mot de passe
             // 5 - Amélioration : choix alphabet
+
         }
 
         static int DemanderNombre(string question)
@@ -24,15 +25,8 @@
                                          // récupérer la reponse
                 string reponse = Console.ReadLine();
 
-                try
-                {
-                    int reponseInt = int.Parse(reponse);
-                    return reponseInt;
-                }
-                catch
-                {
-                    Console.WriteLine("ERREUR : Vous devez rentrer un nombre");
-                }
+                try { int reponseInt = int.Parse(reponse); return reponseInt; }
+                catch { Console.WriteLine("ERREUR : Vous devez rentrer un nombre"); }
 
                 // convertir
                 // gérer l'erreur de conversion
