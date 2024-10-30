@@ -36,22 +36,15 @@
 
         static int DemanderNombreEntre(string question, int min, int max)
         {
-            while (true)
+            int nombre = DemanderNombre(question);
+            if ((nombre >= min) && (nombre <= max))
             {
-                // nombre = DemanderNombre(question)
-                int nombre = DemanderNombre(question);
-                if ((nombre >= min) && (nombre <= max))
-                {
-                    // valide
-                    return nombre;
-                }
-                else
-                {
-                    Console.WriteLine($"ERREUR :  le nombre doit être compris entre {min} et {max}");
-                }
+                // valide
+                return nombre;
             }
             // si le nombre est bien entre min et max => ERREUR / boucler ...
-            // return 0;
+            Console.WriteLine($"ERREUR :  le nombre doit être compris entre {min} et {max}");
+            return DemanderNombreEntre(question, min, max);
         }
     }
 }
