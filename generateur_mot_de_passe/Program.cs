@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("--- Generateur de mot de passe ---");
@@ -13,8 +14,8 @@
             // 3 - Comment choisir un caractère aléatoire
             // 4 - Générer le mot de passe
             // 5 - Amélioration : choix alphabet
-
         }
+
 
         static int DemanderNombre(string question)
         {
@@ -34,6 +35,7 @@
             }
         }
 
+
         static int DemanderNombreEntre(string question, int min, int max)
         {
             int nombre = DemanderNombre(question);
@@ -45,6 +47,20 @@
             // si le nombre est bien entre min et max => ERREUR / boucler ...
             Console.WriteLine($"ERREUR :  le nombre doit être compris entre {min} et {max}");
             return DemanderNombreEntre(question, min, max);
+        }
+
+
+        static int DemanderNombrePositifNonNul(string question)
+        {
+            int nombre = DemanderNombre(question);
+            if (nombre > 0)
+            {
+                // valide
+                return nombre;
+            }
+            Console.WriteLine($"ERREUR :  le nombre doit être supérieur à 0");
+
+            return DemanderNombrePositifNonNul(question);
         }
     }
 }
