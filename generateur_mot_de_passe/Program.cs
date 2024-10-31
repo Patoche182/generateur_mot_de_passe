@@ -52,6 +52,9 @@
 
         static int DemanderNombrePositifNonNul(string question)
         {
+            // return DemanderNombreEntre(question, 1, int.MaxValue) // Méthode Récursive
+
+            // ou 
             int nombre = DemanderNombre(question);
             if (nombre > 0)
             {
