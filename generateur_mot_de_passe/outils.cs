@@ -26,7 +26,6 @@ namespace Formation_CS_2024
             }
         }
 
-
         public static int DemanderNombreEntre(string question, int min, int max)
         {
             int nombre = DemanderNombre(question);
@@ -39,7 +38,6 @@ namespace Formation_CS_2024
             Console.WriteLine($"ERREUR :  le nombre doit être compris entre {min} et {max}");
             return DemanderNombreEntre(question, min, max);
         }
-
 
         public static int DemanderNombrePositifNonNul(string question)
         {
