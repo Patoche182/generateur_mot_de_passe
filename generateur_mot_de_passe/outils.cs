@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Formation_CS_2024
+namespace Formation_CS_2024 // namespace
 {
     static class outils
     {
@@ -14,6 +14,7 @@ namespace Formation_CS_2024
             {
                 // poser question
                 Console.Write(question); // "Longueur du mot de passe souhaité ?"
+
                 // récupérer la reponse
                 string reponse = Console.ReadLine();
 
