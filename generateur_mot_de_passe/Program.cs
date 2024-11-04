@@ -14,7 +14,8 @@ namespace generateur_mot_de_passe
             // 2 - Générer un alphabet ex: "abcd1234"
             // 3 - Comment choisir un caractère aléatoire
             string minuscules = "abcdefghijklmnopqrstuvwxyz";
-            string alphabet = minuscules;
+            string majuscules = minuscules.ToUpper();
+            string alphabet = minuscules + majuscules;
             string motDePasse = "";
 
             int longueurAlphabet = alphabet.Length;
