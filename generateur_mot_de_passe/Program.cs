@@ -12,10 +12,10 @@ namespace generateur_mot_de_passe
             int longueurMotDePasse = outils.DemanderNombrePositifNonNul("Longueur du mot de passe : ");
             Console.WriteLine();
             int choixAlphabet = outils.DemanderNombreEntre("Vous voulez un mot de passe avec : \n" +
-                "1 - avec uniquement des minuscules\n" +
-                "2 - avec des minuscules + MAJUSCULES\n" +
-                "3 - avec des caractères spéciaux + chiffres\n" +
-                "4 - avec des minuscules + MAJUSCULES + chiffres + caractère spéciaux\n" +
+                "1 - uniquement des minuscules\n" +
+                "2 - des minuscules + MAJUSCULES\n" +
+                "3 - des caractères spéciaux + chiffres\n" +
+                "4 - des minuscules + MAJUSCULES + chiffres + caractère spéciaux\n" +
                 "Votre choix : ", 1, 4);
 
             // 2 - Générer un alphabet ex: "abcd1234"
