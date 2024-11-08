@@ -6,6 +6,8 @@ namespace generateur_mot_de_passe
     {
         static void Main(string[] args)
         {
+            const int NB_MOT_DE_PASSE = 10;
+
             Console.WriteLine("--- Generateur de mot de passe ---");
 
             // 1 - Demander la longueur du mot de passe (DemanderNombre) int longueur_mot_de_passe = ...
@@ -44,16 +46,20 @@ namespace generateur_mot_de_passe
                 alphabet = minuscules + majuscules + chiffres + caractereSpeciaux;
 
             int longueurAlphabet = alphabet.Length;
-            // Boucler sur longueur MotDePasse
-            for (int i = 0; i < longueurMotDePasse; i++)
-            {
-                int index = rand.Next(0, longueurAlphabet); // Rand exclu les valeur max, donc si on veut entre 1 et 8, il faut mettre l et non pas l-1
-                motDePasse += alphabet[index];
-            }
-            // Console.WriteLine(alphabet[index]);
-            // motDePasse += alphabet[index];
-            Console.WriteLine("Mot de passe : " + motDePasse);
 
+            for (int j = 0; j < NB_MOT_DE_PASSE; j++)
+            {
+                motDePasse = "";
+                for (int i = 0; i < longueurMotDePasse; i++) // Boucler sur longueur MotDePasse
+                {
+                    int index = rand.Next(0, longueurAlphabet); // Rand exclu les valeur max, donc si on veut entre 1 et 8, il faut mettre l et non pas l-1
+                    motDePasse += alphabet[index];
+                }
+
+                // Console.WriteLine(alphabet[index]);
+                // motDePasse += alphabet[index];
+                Console.WriteLine("Mot de passe : " + motDePasse);
+            }
             // 4 - Générer le mot de passe
             // 5 - Amélioration : choix alphabet
         }
