@@ -34,7 +34,9 @@ namespace generateur_mot_de_passe
             //Console.WriteLine(alphabet[0]); // => 1er caractère de ma chaine
             //Console.WriteLine(alphabet[longueurAlphabet - 1]); // => dernier caractère de ma chaine
             Random rand = new Random();
+
             Console.WriteLine("Aléatoire : ");
+
 
             if (choixAlphabet == 1)
                 alphabet = minuscules;
@@ -44,6 +46,7 @@ namespace generateur_mot_de_passe
                 alphabet = caractereSpeciaux + chiffres;
             else
                 alphabet = minuscules + majuscules + chiffres + caractereSpeciaux;
+
 
             int longueurAlphabet = alphabet.Length;
 
