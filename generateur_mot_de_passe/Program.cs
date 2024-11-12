@@ -37,7 +37,6 @@ namespace generateur_mot_de_passe
 
             Console.WriteLine("Aléatoire : ");
 
-
             if (choixAlphabet == 1)
                 alphabet = minuscules;
             else if (choixAlphabet == 2)
@@ -46,7 +45,6 @@ namespace generateur_mot_de_passe
                 alphabet = caractereSpeciaux + chiffres;
             else
                 alphabet = minuscules + majuscules + chiffres + caractereSpeciaux;
-
 
             int longueurAlphabet = alphabet.Length;
 
@@ -58,7 +56,6 @@ namespace generateur_mot_de_passe
                     int index = rand.Next(0, longueurAlphabet); // Rand exclu les valeur max, donc si on veut entre 1 et 8, il faut mettre l et non pas l-1
                     motDePasse += alphabet[index];
                 }
-
                 // Console.WriteLine(alphabet[index]);
                 // motDePasse += alphabet[index];
                 Console.WriteLine("Mot de passe : " + motDePasse);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Formation_CS_2024 // namespace
 {
-    static class outils
+    static class outils // outils
     {
         public static int DemanderNombre(string question)
         {
