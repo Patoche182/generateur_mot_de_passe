@@ -25,7 +25,7 @@ namespace generateur_mot_de_passe
             string minuscules = "abcdefghijklmnopqrstuvwxyz";
             string majuscules = minuscules.ToUpper();
             string chiffres = "0123456789";
-            string caractereSpeciaux = "#&+-*$µ=_é~";
+            string caractereSpeciaux = "#&+-*$µ=_~";
             //string alphabet = minuscules + majuscules + chiffres + caractereSpeciaux;
             string alphabet;
             string motDePasse = "";
